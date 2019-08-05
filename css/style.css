@@ -1,0 +1,104 @@
+body{
+    position: relative;
+}
+#game{
+    width: 672px;
+    height: 672px;
+    display: block;
+    margin: 100PX auto;
+    background: #333;
+    padding: 30px;
+    color: #fff;
+    box-shadow: 0 0 25px #333;
+
+}
+
+.cell{
+    width: 160px;
+    height:160px;
+    padding: 15px;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    line-height: 160px;
+    font-size: 110px;
+    font-family: cursive;
+    border: 2px solid #aaa;
+    cursor: pointer;
+    transition: all 0.2s ease
+}
+.cell:hover{
+    background-color: #ddd;
+    color: #333
+}
+#winner{
+    line-height: 350px;
+    background: #3C3C3C;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: cursive;
+    display: none;
+    transition: all 0.5s ease-in-out
+}
+
+#winner .text{
+    color: #FFF
+}
+
+/* 
+========================
+      BUTTON THREE
+========================
+*/
+.btn-three {
+	color: #FFF;
+	transition: all 0.5s;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    line-height: 200px;
+    display: block;
+    margin: auto;
+    font-size: smaller;
+    cursor: pointer;
+}
+.btn-three::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(255,255,255,0.1);
+	transition: all 0.3s;
+}
+.btn-three:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+.btn-three::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border: 1px solid rgba(255,255,255,0.5);
+	transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+	opacity: 1;
+	transform: scale(1,1);
+}
